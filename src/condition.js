@@ -4,6 +4,16 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function output(student) {
+    var prefix;
+       if(student.gender === "Male")
+       {
+          prefix = "Mr.";
+       }
+      else
+      {
+         prefix = "Mrs/Miss.";
+      }
+
     return (
         <div className="col-md-4 mb-4">
             <div className="card">
@@ -44,7 +54,7 @@ var student2 ={
   study:"B.C.A"
 }
 
-function class1() {
+function Class1() {
     return (
         <div className="container my-5">
             <h1 className="text-center mb-4">Class Members</h1>
@@ -57,4 +67,4 @@ function class1() {
     )
 }
 
-root.render(class1());
+root.render(<Class1/>);
